@@ -37,4 +37,4 @@ Results will be published in **[results/](results/)** after benchmarking.
 
 ## Benchmarking
 
-See **[BENCHMAKING.md](SUBMISSION.md)** for the submission benchmarrkiung process.
+See **[BENCHMAKING.md](BENCHMARKING.md)** for the submission benchmarrkiung process.
