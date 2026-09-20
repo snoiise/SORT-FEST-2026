@@ -75,9 +75,13 @@ Each scenario is tested using multiple input sizes:
 
 ## Timing
 
-The benchmark measures the time taken by each submission to sort each test dataset.
+Each test is run multiple times to reduce the effect of normal timing variation.
 
-The exact timing and result-processing method is defined by the benchmark code provided in this directory.
+The current benchmark uses **3 runs per test**, with the results averaged to produce the reported time.
+
+Benchmarking is intended to provide a consistent comparison between submissions, not laboratory-grade measurements. Sort Fest is a small competition, so minor variation caused by the operating system, CPU, or other background activity is expected.
+
+The benchmark is designed to make those differences reasonably small while keeping the system simple.
 
 ## Correctness
 
@@ -95,4 +99,21 @@ Benchmark results are written to:
 results.csv
 ```
 
-The results contain the algorithm, author, test scenario, input size, execution time, and res
+The results contain the algorithm, author, test scenario, input size, execution time, and result status.
+
+Example:
+
+```text
+algorithm,author,scenario,size,time,result
+Turbo Sort,Sort Fest,random,1000000,0.552000000,OK
+```
+
+## Benchmark Code
+
+The complete benchmark source is provided in this directory.
+
+The benchmark code is the source of truth for the exact compilation, testing, timing, validation, and result-generation process used by Sort Fest.
+
+---
+
+**Sort Fest 2026**
