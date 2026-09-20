@@ -1,7 +1,5 @@
 # Sort Fest 2026
 
-**A sorting algorithm competition**
-
 Write a sorting algorithm in **Nim**, submit it, and see how it performs against the competition.
 
 ## Competition
