@@ -35,3 +35,6 @@ See **[RULES.md](RULES.md)** for the complete competition rules.
 
 Results will be published in **[results/](results/)** after benchmarking.
 
+## Benchmarking
+
+See **[BENCHMAKING.md](SUBMISSION.md)** for the submission benchmarrkiung process.
