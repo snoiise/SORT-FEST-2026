@@ -9,8 +9,6 @@ Every submission goes through the same compilation and benchmarking process.
 ```text
 Submission
     ↓
-Nim source
-    ↓
 Nim compiler
     ↓
 Generated C
@@ -19,18 +17,18 @@ GCC
     ↓
 Benchmark executable
     ↓
-5 benchmark runs
+Benchmark
     ↓
-Average result
+Results
 ```
 
-The benchmark records the performance of every submission under the same conditions.
+The benchmark tests every submission using the same hardware, compiler configuration, test data, and benchmark conditions.
 
 ## Compilation
 
 Submissions are written in **Nim**.
 
-The official benchmark uses:
+The official benchmark currently uses:
 
 ```text
 Nim: 2.2.12
@@ -38,9 +36,7 @@ GCC: 14.2.0
 Architecture: amd64
 ```
 
-The Nim compiler converts the submitted code into C. The generated C is then compiled using GCC.
-
-The benchmark itself is compiled together with the generated Nim code and required Nim runtime files.
+The Nim compiler converts the submitted code into C. The generated C is then compiled using GCC alongside the benchmark and required Nim runtime code.
 
 ## Benchmark Machine
 
@@ -54,13 +50,13 @@ RAM: 16 GB
 OS: Windows 11 Home 64-bit
 ```
 
-All submissions are tested on the same machine.
+All official submissions are benchmarked on the same machine.
 
 ## Test Data
 
-Each submission is tested against the same datasets.
+Submissions are tested against the same datasets.
 
-Current test scenarios are:
+Current scenarios include:
 
 * Random
 * Sorted
@@ -68,7 +64,7 @@ Current test scenarios are:
 * Duplicates
 * Nearly sorted
 
-Each scenario is tested at multiple input sizes:
+Each scenario is tested using multiple input sizes:
 
 ```text
 1,000
@@ -77,62 +73,26 @@ Each scenario is tested at multiple input sizes:
 1,000,000
 ```
 
-The datasets are generated consistently so that submissions are tested against equivalent inputs.
-
 ## Timing
 
-Each benchmark test is run **5 times**.
+The benchmark measures the time taken by each submission to sort each test dataset.
 
-The five timings are averaged to produce the official result for that test.
-
-For example:
-
-```text
-Run 1    0.552s
-Run 2    0.548s
-Run 3    0.551s
-Run 4    0.556s
-Run 5    0.550s
-───────────────
-Average  0.5514s
-```
-
-The average is the value written to the results file.
+The exact timing and result-processing method is defined by the benchmark code provided in this directory.
 
 ## Correctness
 
-Performance only counts when the submission correctly sorts the input.
+A submission must correctly sort the input.
 
-After every test, the benchmark verifies that the resulting array is sorted.
+After each test, the benchmark verifies the resulting data.
 
-A failed correctness check is recorded as a failed result rather than a valid benchmark time.
+Incorrect results are recorded as failed tests and do not produce a valid performance result.
 
 ## Results
 
-Results are written to:
+Benchmark results are written to:
 
 ```text
 results.csv
 ```
 
-The format is:
-
-```text
-algorithm,author,scenario,size,time,result
-```
-
-Example:
-
-```text
-Turbo Sort,Sort Fest,random,1000000,0.552000000,OK
-```
-
-## Reproducibility
-
-The benchmark configuration, compiler versions, test sizes, datasets, and benchmark machine are kept consistent for official results.
-
-The benchmark code in this directory is the source of truth for how results are produced.
-
----
-
-**Sort Fest 2026**
+The results contain the algorithm, author, test scenario, input size, execution time, and res
