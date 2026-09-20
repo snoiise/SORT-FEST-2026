@@ -1,6 +1,6 @@
 # Sort Fest 2026 — Benchmark
 
-This directory contains the official Sort Fest benchmarking system.
+This contains the official Sort Fest benchmarking system.
 
 ## How It Works
 
@@ -56,7 +56,7 @@ All official submissions are benchmarked on the same machine.
 
 Submissions are tested against the same datasets.
 
-Current scenarios include:
+Scenarios include:
 
 * Random
 * Sorted
@@ -68,9 +68,17 @@ Each scenario is tested using multiple input sizes:
 
 ```text
 1,000
+5,000
 10,000
+25,000
+50,000
 100,000
+250,000
+500,000
 1,000,000
+2,000,000
+5,000,000
+10,000,000
 ```
 
 ## Timing
@@ -83,7 +91,7 @@ Benchmarking is intended to provide a consistent comparison between submissions,
 
 The benchmark is designed to make those differences reasonably small while keeping the system simple.
 
-## Correctness
+## Returning Unsorted Output
 
 A submission must correctly sort the input.
 
@@ -105,15 +113,11 @@ Example:
 
 ```text
 algorithm,author,scenario,size,time,result
-Turbo Sort,Sort Fest,random,1000000,0.552000000,OK
+Custom Sort,Sort Fest,random,1000000,0.552000000,OK
 ```
 
 ## Benchmark Code
 
-The complete benchmark source is provided in this directory.
+The complete benchmark source is provided in this repo.
 
 The benchmark code is the source of truth for the exact compilation, testing, timing, validation, and result-generation process used by Sort Fest.
-
----
-
-**Sort Fest 2026**
