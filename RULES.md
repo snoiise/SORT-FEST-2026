@@ -17,17 +17,7 @@ Submissions are tested using the official Sort Fest benchmark and ranked using t
 Every valid submission goes through the same compilation and benchmarking process.
 
 ```text
-Nim source
-    ↓
-Nim compiler
-    ↓
-Generated C
-    ↓
-GCC
-    ↓
-Official benchmark
-    ↓
-Results
+Nim source -> Nim compiler -> Generated C -> GCC -> Official benchmark -> Results
 ```
 
 The benchmark uses the same hardware, compiler configuration, datasets, and test conditions for every submission.
