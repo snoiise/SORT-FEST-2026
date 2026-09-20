@@ -24,25 +24,6 @@ Submissions are ranked using their benchmark results, with faster performance ra
 | **Single-threaded**    | Ranked using performance with a single CPU thread.                      |
 | **Multithreaded**      | Ranked using performance with multiple CPU threads.                     |
 
-## Benchmark
-
-Submissions follow the same testing pipeline:
-
-```text
- Nim source
-    ↓
-Nim compiler
-    ↓
-    C
-    ↓
-   GCC
-    ↓
- Benchmark
-    ↓
- Results
-```
-
-Each submission is tested against the same benchmark conditions.
 
 ## Submit
 
