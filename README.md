@@ -21,19 +21,3 @@ Submissions are ranked using their benchmark results, with faster performance ra
 | **Lowest Memory**      | Ranked using the amount of memory used while sorting.                   |
 | **Single-threaded**    | Ranked using performance with a single CPU thread.                      |
 | **Multithreaded**      | Ranked using performance with multiple CPU threads.                     |
-
-## Submit
-
-See **[SUBMISSION.md](SUBMISSION.md)** for the submission format and requirements.
-
-## Rules
-
-See **[RULES.md](RULES.md)** for the complete competition rules.
-
-## Benchmarking
-
-See **[BENCHMAKING.md](BENCHMARKING.md)** for the submission benchmarrkiung process.
-
-## Results
-
-Results will be published in **[results/](results/)** after benchmarking.
